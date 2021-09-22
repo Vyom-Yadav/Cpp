@@ -5,7 +5,7 @@ class vector {
     T *v;
     int size;
 public:
-    vector(int m);
+    vector(int size);
 
     vector(T *a, int size) {
         v = new T[this->size = size];
@@ -20,8 +20,8 @@ public:
 };
 
 template<class T> // member function can also be defined like this.
-vector<T> :: vector(int m) {
-     v = new T[size = m];
+vector<T> :: vector(int size) {
+     v = new T[this->size = size];
         for(int i=0; i<size; i++) {
             v[i] = 0;
         }
