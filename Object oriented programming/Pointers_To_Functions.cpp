@@ -4,12 +4,12 @@ typedef void (*FP)(int, int); // FP is a pointer passing int, int as argument an
 
 void Add(int i, int j)
 {
-    std::cout << i << " + " << j << "=" << i + j << std::endl;
+    std::cout << i << " + " << j << " = " << i + j << std::endl;
 }
 
 void Subtract(int i, int j)
 {
-    std::cout << i << " - " << j << "=" << i - j << std::endl;
+    std::cout << i << " - " << j << " = " << i - j << std::endl;
 }
 
 int Multiply(int i, int j) {
@@ -32,7 +32,7 @@ int main() {
 
     int (*p)(int , int);
 
-    int (&pq) (int, int) {Multiply};
+    int (&pq) (int, int) {Multiply}; // Address of function is fixed.
     //pq = Divide; // won't work expression must be a modifiable value.
     
     //int(&pqr)(int, int); // This wont work, the refrence variable pqr requires an initializer.
